@@ -1,0 +1,114 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+
+
+
+    --accent-color: orangered;
+    --background-color: white;
+    --text-color: black;
+    --button-text-color: var(--background-color);
+    --transition-delay: 1s;
+
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: color, background-color var(--transition-delay);
+    overflow: hidden;
+}
+
+body.dark {
+    --accent-color: #d0d066;
+    --background-color: #333;
+    --text-color: white;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    /* letter-spacing: -.025rem; */
+}
+
+.theme-toggle-button {
+    margin-top: 1rem;
+    padding: 1rem 1.6rem;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: var(--accent-color);
+    color: var(--button-text-color);
+    border-radius: 1rem;
+    transform: scale(1);
+    transition: transform, color, background-color var(--transition-delay);
+}
+
+.theme-toggle-button:hover,
+.theme-toggle-button:focus {
+    transform: scale(1.05);
+}
+
+.icon {
+    width: 3rem;
+    margin-right: .5rem;
+    color: var(--button-text-color);
+    transition: color var(--text-color);
+}
+
+
+.sun-moon-container {
+
+    --rotation: 0deg;
+    position: absolute;
+    top: 0;
+    height: 400vmin;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(calc(var(--rotation)*1deg));
+    transition: transform var(--transition-delay);
+}
+
+
+.sun,
+.moon {
+    width: 3rem;
+    position: absolute;
+    transition: opacity, fill var(--transition-delay);
+    color: var(--accent-color);
+}
+
+.sun {
+    top: 5%;
+    opacity: 1;
+}
+
+.dark .sun {
+    opacity: 0;
+}
+
+.moon {
+    bottom: 5%;
+    opacity: 0;
+    transform: rotate(180deg);
+}
+
+.dark .moon {
+    opacity: 1;
+}

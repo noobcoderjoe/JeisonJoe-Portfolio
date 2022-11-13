@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+    <div class="cont">
+        <h1>counter</h1>
+        <p class="counter">0</p>
+        <button class="incr">+</button>
+        <button class="decr">-</button>
+    </div>
+
+    <div class="reset">
+        <h1><i class='bx bx-refresh'></i></h1>
+    </div>
+
+</body>
+
+<script>
+    const counter = document.querySelector(".counter");
+    const plus = document.querySelector(".incr");
+    const minus = document.querySelector(".decr");
+
+    let count = 0;
+
+    plus.addEventListener("click", () => {
+        count++;
+        counter.innerText = count;
+    });
+
+    minus.addEventListener("click", () => {
+        if (count <= 1) {
+            counter.innerText = 0;
+        }
+        else {
+            count--;
+            counter.innerText = count;
+        }
+    });
+
+
+    reset = document.querySelector(".reset");
+    reset.addEventListener("click", () => {
+        count = 0;
+        counter.innerText = count;
+    });
+
+
+</script>
+
+
+</html>

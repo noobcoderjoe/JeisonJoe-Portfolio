@@ -1,0 +1,407 @@
+body {
+    position: relative;
+    /* height: auto; */
+}
+
+
+
+
+
+.container-about {
+    width: 70vw;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 10rem;
+    flex-wrap: wrap;
+    gap: 15%;
+}
+
+.wrapper-name {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: scale(.8);
+
+    animation: name-load 1s ease-in-out;
+    /* animation-fill-mode: forwards; */
+}
+
+.wrapper-name h1 {
+    font-family: 'Nanum Pen Script', cursive;
+    text-transform: uppercase;
+    font-size: 5rem;
+    font-weight: 100;
+}
+
+.wrapper-name h2 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+
+@keyframes name-load {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(.8);
+        opacity: 1;
+    }
+
+}
+
+.wrapper-about-content>* {
+    opacity: 0;
+
+    animation: content-load 1250ms ease-in-out 300ms;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes content-load {
+    0% {
+        transform: translateY(-40%);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
+
+
+
+
+
+
+.wrapper-about-content {
+    width: 40%;
+    position: absolute;
+    right: 20%;
+    top: 10rem;
+    padding-top: 1.6rem;
+    font-size: 1.2rem;
+    line-height: 2.3rem;
+    text-align: left;
+
+
+}
+
+.wrapper-about-content h2 {
+    padding: 0rem 0rem 2rem 0rem;
+    text-transform: uppercase;
+    font-weight: 250;
+    border-bottom: 1px solid #d9d9d92f;
+
+}
+
+.wrapper-about-content p {
+    padding: 2rem 0rem 5rem 0;
+}
+
+
+span {
+    font-weight: bold;
+}
+
+
+
+/* Skills Section */
+
+.skills-container {
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+}
+
+.skill-img {
+    height: 2.4rem;
+}
+
+.skill {
+    margin-top: 3rem;
+
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.skill-title {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    /* background-color: antiquewhite; */
+}
+
+.skills-container p,
+.percent {
+    margin: 0;
+    padding: 0;
+    font-size: 1.4rem;
+}
+
+.skill-progress {
+    width: 90%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1.4rem;
+}
+
+.skill-progress-bar {
+    width: 90%;
+    height: 1rem;
+    border-radius: 1rem;
+    background-color: #d9d9d917;
+}
+
+.skill-progress-fill {
+    height: inherit;
+    border-radius: inherit;
+    background-color: #d9d9d92f;
+}
+
+
+/* levels */
+
+.html-level {
+    width: 80%;
+    animation: filling-animation 1s ease-in-out 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.css-level {
+    width: 85%;
+    animation: filling-animation 1s ease-in-out 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+
+}
+
+.c-level {
+    width: 80%;
+    animation: filling-animation 1s ease-in-out 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.java-level {
+    width: 70%;
+    animation: filling-animation 1s ease-in-out 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.cpp-level {
+    width: 60%;
+    animation: filling-animation 1s ease-in-out 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.python-leve {
+    width: 70%;
+    animation: filling-animation 1s ease-in-out 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes filling-animation {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+/* Hobbies  */
+
+
+.hobbies-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(2, 12rem);
+    gap: 1.4rem;
+    padding-bottom: 15rem;
+}
+
+.hobby {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    /* background-color: aliceblue; */
+}
+
+
+.image {
+    width: 30%;
+}
+
+
+.stick {
+    position: fixed;
+    top: 10rem;
+}
+
+
+
+/* Extra skills */
+
+.ex-skills-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 22%);
+    gap: 2rem;
+}
+
+.ex-skill {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 3rem;
+}
+
+.ex-skill p {
+    font-size: 1.15rem;
+    word-wrap: break-word;
+    line-height: 1.8rem;
+    text-align: center;
+}
+
+.image-ex {
+    width: 40%;
+}
+
+
+
+
+
+
+
+
+
+.progress-about {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    width: 90vw;
+    justify-content: flex-start;
+}
+
+.progress-bar-about {
+    width: 20vw;
+    border-radius: 50%;
+    height: .2rem;
+    background-color: #fff;
+    margin-left: 20vw;
+}
+
+
+.arrow {
+    opacity: .6;
+}
+
+.arrow:hover {
+    opacity: 1;
+}
+
+.forward {
+    position: fixed;
+    right: 5%;
+    bottom: 7%;
+    transform: scale(1.1);
+    animation: arrow-forward 1.2s ease-in-out;
+}
+
+@keyframes arrow-forward {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateX(-70%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+.back {
+    position: fixed;
+    left: 5%;
+    bottom: 7%;
+    transform: scale(1.1);
+    animation: arrow-back 1.2s ease-in-out;
+}
+
+@keyframes arrow-back {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateX(70%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+.hide-nav {
+    display: none;
+}

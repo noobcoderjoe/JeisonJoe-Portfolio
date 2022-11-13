@@ -1,0 +1,172 @@
+@media only screen and (max-width: 600px) {
+    html {
+        max-width: 100vw;
+        height: 100vh;
+    }
+
+
+
+    body {
+        position: relative;
+    }
+
+    .container-about {
+        width: 100%;
+        height: 100%;
+        padding-top: 0;
+        gap: 2rem;
+    }
+
+    .wrapper-name {
+        width: 100%;
+        animation: container-in 800ms ease-in-out;
+        position: absolute;
+        top: 2%;
+        left: 0;
+        padding-top: 2rem;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes container-in {
+        0% {
+            transform: scale(0);
+        }
+
+        100% {
+            transform: scale(.5);
+        }
+    }
+
+    .wrapper-about-content {
+        width: 88vw;
+        position: absolute;
+        left: 1.4rem;
+    }
+
+    .wrapper-about-content p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        text-align: justify;
+        padding-bottom: 2rem;
+
+    }
+
+    .wrapper-about-content h2 {
+        padding: 0rem 0rem 1.2rem 0rem;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        font-weight: 250;
+        border-bottom: 1px solid #d9d9d92f;
+
+    }
+
+    .stick {
+        position: absolute;
+        top: 2rem;
+    }
+
+    .skills-container {
+        width: 95%;
+        margin-bottom: 3rem;
+
+    }
+
+    .skill {
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+
+
+    .skill-img {
+
+        height: 1.6rem;
+    }
+
+    .skill-title>p {
+        padding-bottom: 0;
+    }
+
+    .skill-title {
+        width: 100%;
+        height: max-content;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .skills-container p,
+    .percent {
+        font-size: 1rem;
+    }
+
+
+
+    .skill-progress {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+        margin-top: 1.2rem;
+    }
+
+    .skill-progress>p {
+        padding: 0;
+        font-size: 1rem;
+    }
+
+    .skill-progress-bar {
+        width: 95%;
+        height: .6rem;
+        border-radius: 1rem;
+        background-color: #d9d9d917;
+    }
+
+
+
+
+
+    /* Ex skills */
+
+
+    .ex-skills-container {
+        padding-left: 10%;
+        width: 100%;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: repeat(2, 40%);
+        grid-template-rows: repeat(1, 9rem);
+
+        margin-bottom: 3rem;
+    }
+
+    .ex-skills-container p {
+        text-align: center;
+    }
+
+
+    /* hobbies */
+
+    .hobbies-container {
+
+        padding-bottom: 7rem;
+    }
+
+    .image {
+        width: 50%;
+    }
+
+
+
+    .show {
+        height: 7vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .hide-arw {
+        display: none;
+    }
+
+}

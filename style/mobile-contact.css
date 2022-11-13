@@ -1,0 +1,65 @@
+@media only screen and (max-width:600px) {
+
+
+
+
+    .container-contact {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .wrapper {
+        animation: name-load 1s ease-in-out;
+        transform: scale(.8);
+    }
+
+    @keyframes name-load {
+        0% {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+
+        60% {
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+            transform: scale(.8);
+        }
+
+    }
+
+
+
+
+    .image-link {
+        width: 3rem;
+
+    }
+
+    #container-2 {
+        padding: 40% 0 0 10%;
+    }
+
+    #container-2 h3 {
+        font-size: 1.2rem;
+    }
+
+
+    textarea {
+        width: 90%;
+        height: 15rem;
+    }
+
+    button {
+        margin-left: 0;
+        letter-spacing: .08rem;
+    }
+
+}
